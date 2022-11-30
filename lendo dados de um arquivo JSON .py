@@ -25,6 +25,21 @@ for c in dados:
 
 media = soma / d
 
+for c in dados:
+    print (f'dia: {c["dia"]} e valor: {round(c["valor"], 2)})')
+
 print(f'O menor faturamento ocorrido foi de {round(valor_min, 2)} no dia {d_min}')
 print(f'O maior faturamento ocorrido foi de {round(valor_max, 2)} no dia {d_max}')
-print(f'e a média do faturamento mensal é de {round(media, 2)}')
+print(f'E a média do faturamento mensal é de {round(media, 2)}, considerando apenas os dias úteis')
+
+while True:
+    res = input('gostaria de ver o faturamento de um dia em especifico?(S/N)').upper()
+    if res[0] == 'S':
+        dia = int(input('qual é o dia que deseja saber? '))
+        data = dados[dia - 1]
+        print(f'O faturamento no dia {dia} foi de: R${data["valor"]}')
+    elif res[0] == 'N':
+        print('Obrigado, Programa encerrado')
+        break
+    else:
+        print('digite somente \'S\' ou \'N\'!')
