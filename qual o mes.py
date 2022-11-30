@@ -20,11 +20,6 @@ while s[0] == 'S':
         if s[0] != 'S' and s[0] != 'N':
             print("escolha apenas entre 'S' ou 'N'")
         else:
+            print('Obrigado!\nPrograma encerrado')
             break
         
-    while True:
-        s = input("escolher outro numero?(S/N): ").upper()
-        if s[0] != 'S' and s[0] != 'N':
-            print("escolha apenas entre 'S' ou 'N'")
-        else:
-            break
